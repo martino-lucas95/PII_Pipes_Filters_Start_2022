@@ -6,6 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Library\Library.csproj" />
+    <ProjectReference Include="..\..\..\PII_Pipes_Filters_Start_2022\src\Library\Library.csproj" />
   </ItemGroup>
 
 </Project>

@@ -25,9 +25,9 @@ namespace TwitterUCU
             provider.SavePicture(pipeSerialGrey.Send(NoFilterPicture), @"Bill2GreyFilter.jpg");
 
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter("New Employee 2! ",@"Bill2GreyFilter.jpg"));
-            // var twitterDirectMessage = new TwitterMessage();
-            // Console.WriteLine(twitterDirectMessage.SendMessage("Hola!", "249011461"));
+            Console.WriteLine(twitter.PublishToTwitter("New Employee 15! ",@"Bill2GreyFilter.jpg"));
+            var twitterDirectMessage = new TwitterMessage();
+            Console.WriteLine(twitterDirectMessage.SendMessage("Hola!", "249011461"));
         }
     }
 }

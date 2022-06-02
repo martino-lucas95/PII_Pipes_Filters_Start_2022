@@ -12,11 +12,14 @@ namespace CompAndDel
             IPicture NoFilterPicture = provider.GetPicture(@"luke.jpg");
             
             PipeNull pipeNull = new PipeNull();
+            PipeFork pipeFork = new PipeFork();
             
             FilterGreyscale greyScale = new FilterGreyscale();
-            PipeSerial pipeSerialGrey = new PipeSerial(greyScale, pipeNull);
-
             FilterNegative filterNegative = new FilterNegative();
+            
+            PipeSerial pipeSerialGrey = new PipeSerial(greyScale, pipeFork);
+            
+
             PipeSerial pipeSerialNegative = new PipeSerial(filterNegative, pipeNull);
 
             provider.SavePicture(pipeNull.Send(NoFilterPicture), @"LukeNull.jpg");
